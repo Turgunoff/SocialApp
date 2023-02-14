@@ -1,6 +1,7 @@
-import { StyleSheet, Image } from "react-native"
+import { StyleSheet, Image, LayoutAnimation } from "react-native"
 import { NativeBaseProvider } from "native-base"
 import Onboarding from "react-native-onboarding-swiper"
+import LottieView from "lottie-react-native"
 
 const SplashScreen = () => {
   return (
@@ -8,22 +9,31 @@ const SplashScreen = () => {
       <Onboarding
         pages={[
           {
-            backgroundColor: "#464646",
-            image: <Image source={require("../../assets/splash.png")} />,
-            title: "Onboarding",
-            subtitle: "Done with React Native Onboarding Swiper",
+            backgroundColor: "#fff",
+            image: (
+              <LottieView
+                source={require("../assets/welcome1.json")}
+                autoplay
+              />
+            ),
           },
           {
-            backgroundColor: "#121212",
-            image: <Image source={require("../../assets/splash.png")} />,
-            title: "Onboarding 2",
-            subtitle: "Done with React Native Onboarding Swiper",
+            backgroundColor: "#fff",
+            image: (
+              <LottieView
+                source={require("../assets/welcome2.json")}
+                autoplay
+              />
+            ),
           },
           {
-            backgroundColor: "#828282",
-            image: <Image source={require("../../assets/splash.png")} />,
-            title: "Onboarding 3",
-            subtitle: "Done with React Native Onboarding Swiper",
+            backgroundColor: "#fff",
+            image: (
+              <LottieView
+                source={require("../assets/welcome3 .json")}
+                autoplay
+              />
+            ),
           },
         ]}
       />
